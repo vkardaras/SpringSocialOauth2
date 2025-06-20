@@ -1,3 +1,39 @@
 #+title: Spring Boot Social Login
 
-Demo application for Spring Boot social login with github, google and okta
+** Demo application for Spring Boot social login with github, google and okta
+
+*** Prerequisites
+
+Create an application for each provider (github, google, okta).
+
+github and google are default providers in spring boot.
+
+okta is a custom provider and is an example of how to specify a custom social login provider
+
+*** Variables
+
+Variables defined in =application.yml=
+
+- GITHUB_CLIENT_ID
+- GITHUB_CLIENT_SECRET
+- GOOGLE_CLIENT_ID
+- GOOGLE_CLIENT_SECRET
+- OKTA_BASE_URL
+- OKTA_CLIENT_ID
+- OKTA_CLIENT_SECRET
+
+*** Running the application
+
+Define the values of the variables in your IDE or run the application with maven and specify the variables there. Replace <value> with the actual variables
+
+#+begin_src shell
+./mvnw  spring-boot:run \
+ -Dspring-boot.run.arguments=" \
+--GITHUB_CLIENT_ID=<value> \
+--GITHUB_CLIENT_SECRET=<value> \
+--GOOGLE_CLIENT_ID=<value> \
+--GOOGLE_CLIENT_SECRET=<value> \
+--OKTA_BASE_URL=<value> \
+--OKTA_CLIENT_ID=<value> \
+--OKTA_CLIENT_SECRET=<value>"
+#+end_src
