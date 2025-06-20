@@ -24,7 +24,7 @@ Variables defined in =application.yml=
 
 ** Running the application
 
-Define the values of the variables in your IDE or run the application with maven and specify the variables there. Replace <value> with the actual variables
+Define the values of the variables in your IDE or run the application with maven and specify the variables there. Replace <value> with the actual value of each variable
 
 #+begin_src shell
 ./mvnw  spring-boot:run \
