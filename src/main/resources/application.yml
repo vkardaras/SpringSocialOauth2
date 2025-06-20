@@ -1,0 +1,29 @@
+okta:
+    base-url: ${OKTA_BASE_URL}
+
+spring:
+    application:
+        name: SpringSocialOauth2Demo
+    security:
+        oauth2:
+            client:
+                provider:
+                    okta:
+                        authorization-uri: ${OKTA_BASE_URL}/oauth2/v1/authorize
+                        token-uri: ${OKTA_BASE_URL}/oauth2/v1/token
+                        user-info-uri: ${OKTA_BASE_URL}/oauth2/v1/userinfo
+                        jwk-set-uri: ${OKTA_BASE_URL}/oauth2/v1/keys
+                        user-name-attribute: sub
+                registration:
+                    github:
+                        client-id: ${GITHUB_CLIENT_ID}
+                        client-secret: ${GITHUB_CLIENT_SECRET}
+                    google:
+                        client-id: ${GOOGLE_CLIENT_ID}
+                        client-secret: ${GOOGLE_CLIENT_SECRET}
+                    okta:
+                        client-id: ${OKTA_CLIENT_ID}
+                        client-secret: ${OKTA_CLIENT_SECRET}
+        user:
+            name: user
+            password: password
